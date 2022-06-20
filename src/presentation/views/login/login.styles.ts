@@ -5,6 +5,7 @@ export const loginContainer = css({
     display: "flex",
     flexDirection: "column",
     width: "500px",
+    textAlign: "center",
     alignContent: "center",
 
     '& input': {
