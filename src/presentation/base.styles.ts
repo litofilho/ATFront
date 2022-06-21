@@ -1,6 +1,6 @@
 import { styled, css } from "../utils/styles/stitches.config"
 import eventaumLogo from "../assets/eventaumLogo.svg"
-import searchOutline from "../assets/searchOutline.svg"
+import searchOutline from "../assets/icons/searchOutline.svg"
 
 export const Button = styled("button", {
     borderRadius: "2px",
@@ -140,3 +140,16 @@ export const categoryTitle = css({
 })
 
 export const flex1 = css({ flex: 1, margin: "50px" })
+
+export const overlay = css({
+    position: "fixed",
+    width: "100vw",
+    height: "100vh",
+    zIndex: 3,
+    background: "#36363657",
+    display: "flex",
+    left: 0,
+    top: 0
+})
+
+export const col = css({ flex: 1 })

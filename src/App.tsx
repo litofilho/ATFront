@@ -8,17 +8,20 @@ import {
   Link
 } from "react-router-dom";
 import Home from './presentation/views/home/home';
+import GlobalContext from './domain/context';
 
 function App() {
   globalStyles()
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path='home' element={<Home />} />
-      </Routes>
-    </Router>
+    <GlobalContext>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path='home' element={<Home />} />
+        </Routes>
+      </Router>
+    </GlobalContext>
   )
 }
 

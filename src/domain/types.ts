@@ -6,10 +6,14 @@ export enum ECategory {
 
 export interface IService {
     title: string
-    data: Date
+    data?: Date
     tags: string[]
     location: string
     bgImg: string
     description: string
-    category: ECategory
+    category?: ECategory
+}
+
+export interface IFCProps {
+    children: React.ReactNode;
 }
