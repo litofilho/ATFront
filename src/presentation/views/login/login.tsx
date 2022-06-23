@@ -50,14 +50,13 @@ function Login() {
 
     return (
         <div className={bgContainer().className}>
-            <Logo aria-label="Eventaum. logo pequena" size="small" role="logo" />
-            <form onSubmit={e => loginUser(e, email, senha)} className={loginContainer().className} aria-label="form" role="form login">
+            <form onSubmit={e => loginUser(e, email, senha)} className={loginContainer().className} role="form">
                 <Logo aria-label="Eventaum. logo grande" size="large" />
-                <TextField tabIndex={0} title="Email" placeholder="Email" name="email" value={email} onChange={e => setEmail(e.target.value)} type="email" required></TextField>
-                <TextField tabIndex={1} title="Senha" placeholder="Senha" name="email" value={senha} onChange={e => setSenha(e.target.value)} type="password" required></TextField>
-                <Button size="large" primary="true" name="login" type="submit">Login</Button>
+                <TextField tabIndex={0} title="Email" aria-label="input email" placeholder="Email" name="email" value={email} onChange={e => setEmail(e.target.value)} type="email" required></TextField>
+                <TextField title="Senha" placeholder="Senha" aria-label="input password" name="email" value={senha} onChange={e => setSenha(e.target.value)} type="password" required></TextField>
+                <Button size="large" primary="true" name="login" type="submit" aria-label="button submit">Login</Button>
                 <span>ou</span>
-                <Button size="large" primary="false" name="register" onClick={() => registerUser()} type="button">Cadastre-se</Button>
+                <Button size="large" primary="false" name="register" onClick={() => registerUser()} type="button" aria-label="create user">Cadastre-se</Button>
             </form>
         </div>
     )

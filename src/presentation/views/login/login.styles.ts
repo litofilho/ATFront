@@ -4,7 +4,9 @@ export const loginContainer = css({
     margin: "auto",
     display: "flex",
     flexDirection: "column",
-    width: "500px",
+    width: "40%",
+    minWidth: "270px",
+    maxWidth: "500px",
     textAlign: "center",
     alignContent: "center",
 

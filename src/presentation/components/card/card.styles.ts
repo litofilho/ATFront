@@ -93,7 +93,7 @@ export const cardDetailsTitle = css({
     marginBottom: "15px",
     position: "relative",
     zIndex: 2,
-    color: "$primary",
+    color: "$secondary",
     display: "flex",
     alignItems: "center"
 })
@@ -102,8 +102,8 @@ export const cardDetailsStatus = css({
     background: "rgba(77, 161, 255, 0.1)",
     borderRadius: "2px",
     padding: "6px 10px",
-    fontSize: "9px",
-    color: "$primary",
+    fontSize: "11px",
+    color: "$secondary",
     lineHeight: "11px",
     textTransform: "uppercase",
     marginLeft: "10px"
@@ -113,6 +113,7 @@ export const cardDetailsInfo = css({
     width: "100%",
     padding: "16px 16px 16px 0",
     display: "grid",
+    color: "$secondary",
 
     "& label": {
         fontSize: "16px",

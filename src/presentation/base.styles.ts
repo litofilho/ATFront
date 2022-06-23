@@ -22,12 +22,12 @@ export const Button = styled("button", {
         },
         primary: {
             true: {
-                background: "$primary"
+                background: "$secondary"
             },
             false: {
                 background: "$bglightning",
-                border: "solid 1px $primary",
-                color: "$primary"
+                border: "solid 1px $secondary",
+                color: "$secondary"
             }
         }
     }
@@ -45,7 +45,7 @@ export const TextField = styled("input", {
     variants: {
         search: {
             true: {
-                margin: "auto 60px",
+                margin: "auto 40px",
                 flex: 1,
                 border: "none",
                 height: "26px",
@@ -65,9 +65,9 @@ export const bgContainer = css({
     background: "$bgcolor",
     display: "flex",
     width: "100vw",
-    height: "100vh",
+    minHeight: "100vh",
+    flexDirection: "column",
     position: "relative",
-    flexWrap: "wrap"
 })
 
 
@@ -83,10 +83,10 @@ export const Logo = styled("div", {
                 height: "38px",
                 position: "absolute",
                 left: "30px",
-                top: "30px"
+                top: "30px",
             },
             large: {
-                width: "314px",
+                width: "270px",
                 height: "78px",
                 margin: "auto"
             }

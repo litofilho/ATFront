@@ -8,6 +8,7 @@ import {
 import Home from './presentation/views/home/home';
 import GlobalContext from './domain/context';
 import NotFound from './presentation/views/notFound/notFound';
+import Logout from './presentation/logout/logout';
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path='home' element={<Home />} />
+          <Route path='logout' element={<Logout />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
