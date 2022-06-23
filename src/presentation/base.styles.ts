@@ -110,7 +110,7 @@ export const Avatar = styled("img", {
 
 export const gridContainer = css({
     display: "flex",
-    height: "calc(100% - 100px)",
+    height: "calc(100% - 60px)",
     flex: 1,
     flexWrap: "wrap"
 })
@@ -141,7 +141,7 @@ export const categoryTitle = css({
 
 export const flex1 = css({
     flex: 1,
-    margin: "50px",
+    margin: "30px",
     minWidth: "340px"
 })
 
