@@ -9,10 +9,14 @@ type PropsSelectedServiceContext = {
 export const DEFAULT_VALUE = {
     state: {
         title: "",
-        tags: [""],
+        time: "",
+        ticket: "",
+        tags: "",
         location: "",
+        address: "",
         bgImg: "",
         description: "",
+        type: "",
     },
     setState: () => { },
 };

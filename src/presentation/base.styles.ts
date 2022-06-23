@@ -139,7 +139,11 @@ export const categoryTitle = css({
     }
 })
 
-export const flex1 = css({ flex: 1, margin: "50px" })
+export const flex1 = css({
+    flex: 1,
+    margin: "50px",
+    minWidth: "340px"
+})
 
 export const overlay = css({
     position: "fixed",
@@ -152,4 +156,18 @@ export const overlay = css({
     top: 0
 })
 
-export const col = css({ flex: 1 })
+export const container = css({
+    display: "flex",
+    flexDirection: "column"
+})
+
+export const row = css({
+    display: "flex",
+    flexDirection: "row"
+})
+
+export const col = css({
+    display: "flex",
+    flexDirection: "column",
+    flex: 1
+})

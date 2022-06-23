@@ -6,11 +6,16 @@ export enum ECategory {
 
 export interface IService {
     title: string
-    data?: Date
-    tags: string[]
+    date?: Date
+    time: string,
+    ticket: string
+    tags: string
     location: string
+    address: string
     bgImg: string
     description: string
+    classification?: string
+    type: string
     category?: ECategory
 }
 

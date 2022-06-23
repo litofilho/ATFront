@@ -1,5 +1,4 @@
-import { bgContainer, Logo, Button, TextField, Avatar } from "../../base.styles"
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { IService } from "../../../domain/types";
 import { cardItemBgImg, cardItemContainer, cardItemTag, cardItemTitle } from "./card.styles";
 import { SelectedServiceContext } from "../../../domain/context/selectedServiceContext";
@@ -10,22 +9,22 @@ interface ICardItemProps {
 
 const CardItem: React.FC<ICardItemProps> = ({ service }: ICardItemProps) => {
 
-    const [cardItem, setCardItem] = useState<IService>(service)
-    const { setState, state } = useContext(SelectedServiceContext);
+    const [cardItem] = useState<IService>(service)
+    const { setState } = useContext(SelectedServiceContext);
 
 
     return (
         <div className={cardItemContainer().className} onClick={() => setState(cardItem)}>
             {
                 cardItem.bgImg &&
-                <img src={cardItem.bgImg} className={cardItemBgImg().className} />
+                <img src={cardItem.bgImg} alt={`imagem ilustrativa ${cardItem.title}`} className={cardItemBgImg().className} />
             }
-            <span>{cardItem.data!.getHours().toLocaleString()}h</span>
+            <span>{cardItem.time}</span>
             <span className={cardItemTitle().className}>{cardItem.title}</span>
             <div>
-                {cardItem.tags.map(tag =>
+                {cardItem.tags.split(';').map(tag =>
                     <div key={tag} className={cardItemTag().className}>
-                        <img src={`src/assets/icons/${tag}.svg`} />
+                        <img src={`src/assets/icons/${tag}.svg`} alt={`icone ${tag}`} />
                     </div>
                 )}
 

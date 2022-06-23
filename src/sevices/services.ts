@@ -1,31 +1,37 @@
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, User } from "firebase/auth";
+import { getDatabase, ref, child, get } from "firebase/database";
 
-export const loginWithEmail = (mail: string, password: string) => {
+export const loginWithEmail: (mail: string, password: string) => Promise<User | null> = (mail: string, password: string) => {
     const auth = getAuth();
 
-    signInWithEmailAndPassword(auth, mail, password)
+
+    return signInWithEmailAndPassword(auth, mail, password)
         .then((userCredential) => {
-            // Signed in
             const user = userCredential.user;
-            console.log(user)
-            // ...
+            sessionStorage.setItem("user_logged", JSON.stringify(user))
+            return user
         })
         .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(error)
+            return null
         });
 }
 
-export const createUser = (email: string, password: string) => {
+export const createUser: (mail: string, password: string) => Promise<User | null> = (email: string, password: string) => {
     const auth = getAuth();
-    createUserWithEmailAndPassword(auth, email, password)
+
+    return createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             const user = userCredential.user;
-            console.log(user)
+            sessionStorage.setItem("user_logged", JSON.stringify(user))
+            return user
         })
         .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
+            return null
         });
+}
+
+export const getServices = () => {
+    const dbRef = ref(getDatabase());
+
+    return get(child(dbRef, `services`))
 }

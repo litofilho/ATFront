@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
@@ -11,8 +11,29 @@
 </head>
 
 <body>
-  <div id="root"></div>
+  <h1 style="display: none;">Eventaum.</h1>
+  <div id="root" aria-label="app"></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>
 
 </html>
+
+<div class='mapouter'>
+  <div class='gmap_canvas'><iframe id='gmap_canvas' style='width: 100%;'
+      src='https://maps.google.com/maps?q=Av.%20Paulista,%201578%20-%20Bela%20Vista,%20S%C3%A3o%20Paulo%20-%20SP,%2001310-200&t=&z=13&ie=UTF8&iwloc=&output=embed'
+      frameborder='0' scrolling='no' marginheight='0' marginwidth='0'></iframe><a
+      href='https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/'></a><br>
+    <style>
+      .mapouter {
+        position: relative;
+        text-align: right;
+      }
+    </style>
+    <style>
+      .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+      }
+    </style>
+  </div>
+</div>

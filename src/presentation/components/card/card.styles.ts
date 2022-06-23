@@ -30,7 +30,7 @@ export const cardDate = css({
 export const cardItemContainer = css({
     borderRadius: "6px",
     padding: "15px",
-    background: "$primary",
+    background: "$secondary",
     fontSize: "13px",
     color: "#fff",
     display: "flex",
@@ -65,7 +65,12 @@ export const cardItemTag = css({
     float: "left",
     marginRight: "10px",
     position: "relative",
-    zIndex: 2
+    zIndex: 2,
+    height: "30px",
+
+    "& img": {
+        height: "100%"
+    }
 })
 
 export const cardDetailsContainer = css({
@@ -75,12 +80,11 @@ export const cardDetailsContainer = css({
     background: "$bglightning",
     fontSize: "14px",
     display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap",
+    flexDirection: "column",
     position: "relative",
     cursor: "pointer",
     margin: "auto",
-    maxWidth: "1150"
+    maxWidth: "1150px"
 })
 
 export const cardDetailsTitle = css({
@@ -107,7 +111,7 @@ export const cardDetailsStatus = css({
 
 export const cardDetailsInfo = css({
     width: "100%",
-    padding: "16px",
+    padding: "16px 16px 16px 0",
     display: "grid",
 
     "& label": {

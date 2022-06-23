@@ -1,4 +1,4 @@
-import { bgContainer, Logo, Button, TextField, Avatar } from "../../base.styles"
+import { Logo, TextField, Avatar } from "../../base.styles"
 import { useEffect, useState } from "react";
 import { headerStyles } from "./header.styles";
 
@@ -17,10 +17,10 @@ const Header: React.FC<IHeaderProps> = ({ onSearch }: IHeaderProps) => {
 
 
     return (
-        <div className={headerStyles().className}>
-            <TextField search value={textSearch} onChange={e => settextSearch(e.target.value)} placeholder="Busque por tudo que está ao seu alcance" />
-            <Logo size="small" home />
-            <Avatar src="https://www.w3schools.com/howto/img_avatar.png" />
+        <div className={headerStyles().className} role="header">
+            <TextField role="search" aria-label="search" search title="Busque por tudo que está ao seu alcance" value={textSearch} onChange={e => settextSearch(e.target.value)} placeholder="Busque por tudo que está ao seu alcance" />
+            <Logo size="small" aria-label="Eventaum. logo pequena" home />
+            <Avatar alt="avatar" src="https://www.w3schools.com/howto/img_avatar.png" />
         </div>
     )
 }
